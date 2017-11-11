@@ -2,7 +2,15 @@
 COMP494 HW1
 
 ### Created by
-### Initial Sketches / Planning
+Emma Thole, and no one else.
+### Initial Sketches & Plans
+![fullsizerender 5](https://user-images.githubusercontent.com/33046909/32686263-31fe1346-c667-11e7-843e-4efc9d46f42c.jpg)
+
 ### Final Implementation Screenshots
+![Screen Shot 2017-11-10 at 9.42.18 PM](https://user-images.githubusercontent.com/33046909/32686275-6d8101e4-c667-11e7-915b-d23285e5ccdc.png)
+![Screen Shot 2017-11-10 at 9.43.07 PM](https://user-images.githubusercontent.com/33046909/32686285-b3e36e1a-c667-11e7-8932-ecf4be00b628.png)
 ### Discussion of Design Decisions
+I decided to make the window twice as wide as it was tall to allow for a higher number of attributes to fit into the window. I used a black background and green and white graphic objects because of personal preference; this is the color scheme I use for the majority of my programming assignments, which in hindsight may have not been the best decision for this type of projeect. The axes were only given two scale labels to minimize occlusion of lines plotted. Labels for the axes alternate between two different y-values to avoid overlaps when a high number of attributes are present. When filtering, there is a highlighted region along the selected axis to preview the filter that will be created when the mouse is released. For this project, I was able to implement many of the features I originally planned, but there were some that I did not have time to add since I did this assignment without a partner. I wanted to create a color mapping that would use linear interpolation to color data points in a continuous manner across the values of an axis, and to have this change based on the axis selected. I also wanted to add a way to highlight the line of a single data point with a list of all data point names that could be selected from and searched through, but this was too ambitious for this time frame.
 ### User's Guide
+This implementation is able to work with all three of the datasets provided, by changing the line with the filename in the main program file to match the desired dataset. When running the code, dragging the labels of the axes side-to-side allows for reordering the axes on screen. Dragging along the axes themselves will filter the data to only show items within the value range for that particular attribute. One filter per axis is allowed, and these can be redone by dragging over a new region of the axis. All filters can be cleared by clicking at the very bottom of the window below the axes.
+There are many things that can be improved with this code, some of which were discussed in the previous section. There is a problem when using the nutrients dataset specifically, since labels overlap on the x axis slightly, and clicking within two labels will cause both axes to be selected. More time would have allowed for the solving of this problem. One addition that would have been very helpful to the filtering feature is to add labels to the boundaries of the filters, and to display a label at the current position over a particular axis. This would have been helpful to get a more accurate reading of the data values for specific attributes, and to be able to have the knowledge of what exactly was being filtered out.
